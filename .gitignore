@@ -1,0 +1,8 @@
+*.env
+**/node_modules/
+docker-compose.yml
+default.conf
+package-lock.json
+**/dist/
+**/db_prod/
+**/db_dev/

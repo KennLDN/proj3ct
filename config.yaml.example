@@ -1,0 +1,26 @@
+project_options:
+  project_name: proj3ct
+  backend_enabled: true
+
+port_options:
+  frontend_port: 3000    # ports not published on prod
+  backend_port: 3001     # use a reverse proxy!
+
+database_options:
+  mongodb_container: false
+  postgresql_container: false
+  postgresql_username: admin
+  postgresql_password: changeme
+
+domain_options:
+  dev:
+    frontend_domain: localhost:3000
+    backend_domain: localhost:3001/api
+    dev_https: false     # this is just for environment variable! https must be configured through a reverse proxy.
+  prod:
+    frontend_domain: p3.com
+    backend_domain: p3.com/api
+    prod_https: true     # this is just for environment variable! https must be configured through a reverse proxy.
+
+network_options:
+  network_name: proj3ct  # network must already exist! you will need to make it in docker first.

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "scripts": {
+    "dev": "node env.js dev && node nginx.js && node compose.js dev && docker-compose up -d",
+    "prod": "node env.js prod && node nginx.js && node compose.js prod && docker-compose up -d",
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  }
+}
